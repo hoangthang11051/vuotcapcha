@@ -1,0 +1,25 @@
+{
+   "browser_action": {
+      "default_popup": "options.html",
+      "default_title": "html chính"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "jquery-2.1.4.min.js", "common.js", "myscript.js" ],
+      "matches": [ "https://*/*", "http://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self'; object-src 'self'",
+   "description": "Tự động vượt capcha",
+   "icons": {
+      "128": "icons/a.jpg",
+      "16": "icons/a.jpg",
+      "48": "icons/a.jpg"
+   },
+   "manifest_version": 2,
+   "name": "Captcha",
+   "options_page": "options.html",
+   "permissions": [ "storage", "http://*/*", "https://*/*" ],
+   "update_url": "https://www.messenger.com/t/kaido01",
+   "version": "1.0"
+}
